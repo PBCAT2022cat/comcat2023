@@ -1,0 +1,8 @@
+using SomeVar
+
+new fun cout a
+	System.print a endl
+end
+
+glb _endl = endl
+glb _table = "\t"

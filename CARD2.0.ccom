@@ -1,0 +1,124 @@
+using sys
+using random
+
+/*
+writer:Pbcat
+A game to play cards
+*/
+
+
+System.print "hello" endl
+System.print "let play" endl
+
+var pla = 0
+var plb = 0
+
+var aC = 0
+var bC = 0
+
+var aW = 1
+var bW = 1
+
+var vel = 0
+
+var endl = "\n"
+
+var run = True
+var cout = ""
+
+
+while cout != "quit" Then
+	while run == True Then
+		if aW == 1 Then
+			System.input "plA,do you want?[n/y]:" -> cout
+			if cout == "n" Then
+				var aW = 0
+			else
+				randint 0 11 >>> vel
+				System.$ aC + vel
+				System.print vel "!" endl "now you have :" aC endl endl
+				
+			end
+		end
+		
+		if bW == 1 Then
+			System.input "plB,do you want?[n/y]:" -> cout
+			if cout == "n" Then
+				var bW = 0
+			else
+				randint 0 11 >>> vel
+				System.$ bC + vel
+				System.print vel "!" endl "now you have:" bC endl endl
+				
+			end
+		end
+		if bW == 0 Then
+			if aW == 0 Then
+				var run = False
+				System.print "end-----------------------" endl
+				var plaW = True
+				var plbW = True
+				
+				if aC > 24 Then
+					var plaW = False
+				end
+				if bC > 24 Then
+					var plbW = False
+				end
+				
+				if bC > aC Then
+					if plbW == True Then
+						var plaW = False
+					end
+				end
+				if aC > bC Then
+					if plaW == True Then
+						var plbW = False
+					end
+				end
+				
+				if plaW Then
+					if plbW Then
+						System.print "tie" endl
+					else Then
+						System.print "plA win!" endl
+					end
+				end
+				if plbW Then
+					if plaW == False :
+						System.print "plB win!" endl
+					end
+				end
+				if plaW == False Then
+					if plbW == False :
+						System.print "tie" endl
+					end
+				end
+				
+				
+				System.print "game end -----------------------" endl
+			end
+		end
+	end
+	
+	System.input "play again?[y/n]:" -> cout
+	if cout == "n" Then
+		var cout = "quit"
+	else
+		var pla = 0
+		var plb = 0
+
+		var aC = 0
+		var bC = 0
+
+		var aW = 1
+		var bW = 1
+
+		var vel = 0
+
+		var run = True
+		var cout = ""
+	end
+end
+
+System.ending

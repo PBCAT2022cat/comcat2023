@@ -1,0 +1,2 @@
+glb time.time = 0
+System.getTime time.time

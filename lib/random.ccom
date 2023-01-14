@@ -1,0 +1,37 @@
+#this mode provide random numbers to users
+
+#randint <small> <big> -> <var>
+new fun randint c,b
+    System.$ b - c
+    var a = getTime }
+	#System.print "f\n"
+    System.$ a * 1000
+    System.$ a * 123692
+    System.$ a % 7980
+    System.$ a * 798236
+    System.$ a % b
+    System.$ a + c
+    System.int a -> a
+    return a
+end
+
+#random -> <var>
+new fun random
+    var a = getTime }
+    System.$ a * 1000
+    System.$ a * 123692
+    System.$ a % 7980
+    System.$ a * 798236
+    System.$ a % 100
+    return a
+end
+
+#seedRand <number> -> <var>
+new fun seedRand a
+    System.$ a * 1000
+    System.$ a * 123692
+    System.$ a % 7980
+    System.$ a * 798236
+    System.$ a % 100
+    return a
+end
